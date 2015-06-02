@@ -10,7 +10,7 @@ def hello_world():
   storage = Storage()
   storage.populate()
   score = storage.score()
-  return "Are you OK?  %d!" % score
+  return "Hello world, %d!" % score
 
 class Storage():
   def __init__(self):
@@ -28,7 +28,7 @@ class Storage():
 
   def populate(self):
     cur = self.db.cursor()
-    cur.execute("INSERT INTO scores(score) VALUES(520)")
+    cur.execute("INSERT INTO scores(score) VALUES(1234)")
 
   def score(self):
     cur = self.db.cursor()
